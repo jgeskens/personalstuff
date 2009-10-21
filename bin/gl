@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. ~/env/glossyp/bin/activate
+cd ~/workspace/glossyp
+
+ps aux | grep -v "grep" | grep "runserver 0.0.0.0:8002" > /dev/null || python manage.py runserver 0.0.0.0:8002
+
